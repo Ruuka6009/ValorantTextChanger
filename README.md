@@ -15,7 +15,7 @@ So I'm here to help.
 ## Select the language of your choice in my executable
 Example English
 
-![image](https://user-images.githubusercontent.com/128378374/229327737-7ad2758c-ae9f-4e62-8a29-5c21f9223d07.png)
+![image](https://user-images.githubusercontent.com/128378374/229373226-549f4cad-ecd0-4f21-89d2-f5af4c87c1dc.png)
 
 And now click on change language,
 After you see da lil toast telling you the language as been changed successfully, you can launch the game
