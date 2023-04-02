@@ -19,6 +19,7 @@ And now click on change language,
 After you see da lil toast telling you the language as been changed successfully, you can launch the game
 
 ![image](https://user-images.githubusercontent.com/128378374/229327778-dbc264ea-bcc9-43b6-b2cb-131672a2fc16.png)
+
 And Voilà! ez right?
 
 ![image](https://user-images.githubusercontent.com/128378374/229327841-ccbb797f-7a35-417a-bac1-31f3ed3e865a.png)
