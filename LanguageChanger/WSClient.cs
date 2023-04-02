@@ -30,21 +30,21 @@ namespace LanguageChanger
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("wss://riot:" + App.Default.lockfile_password + "@127.0.0.1:" + App.Default.lockfile_port + "/rnet-product-registry/v4/available-product-locales/products/valorant/patchlines/live"),
-                    Headers = { { "Authorization", "Basic " + App.Default.lockfile_token }, },
+                    RequestUri = new Uri("wss://riot:" + Properties.App.Default.lockfile_password + "@127.0.0.1:" + Properties.App.Default.lockfile_port + "/rnet-product-registry/v4/available-product-locales/products/valorant/patchlines/live"),
+                    Headers = { { "Authorization", "Basic " + Properties.App.Default.lockfile_token }, },
                 };
                 using (var response = await client.SendAsync(request))
                 {
                     response.EnsureSuccessStatusCode();
                     var body = await response.Content.ReadAsStringAsync();
 
-                    App.Default.all_lang = body;
+                    Properties.App.Default.all_lang = body;
 
-                    if (App.Default.debug)
+                    if (Properties.App.Default.debug)
                     {
                         Debug.WriteLine("=======================================================================================================================================");
                         Debug.WriteLine("[DEBUG] - WSClient.cs:GetAllLang:body : " + body);
-                        Debug.WriteLine("[DEBUG] - WSClient.cs:GetAllLang:all_lang : " + App.Default.all_lang);
+                        Debug.WriteLine("[DEBUG] - WSClient.cs:GetAllLang:all_lang : " + Properties.App.Default.all_lang);
                         Debug.WriteLine("=======================================================================================================================================");
                     }
 
@@ -76,21 +76,21 @@ namespace LanguageChanger
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("wss://riot:" + App.Default.lockfile_password + "@127.0.0.1:" + App.Default.lockfile_port + "/riotclient/product-locales/products/valorant/patchlines/live"),
-                    Headers = { { "Authorization", "Basic " + App.Default.lockfile_token }, },
+                    RequestUri = new Uri("wss://riot:" + Properties.App.Default.lockfile_password + "@127.0.0.1:" + Properties.App.Default.lockfile_port + "/riotclient/product-locales/products/valorant/patchlines/live"),
+                    Headers = { { "Authorization", "Basic " + Properties.App.Default.lockfile_token }, },
                 };
                 using (var response = await client.SendAsync(request))
                 {
                     response.EnsureSuccessStatusCode();
                     var body = await response.Content.ReadAsStringAsync();
 
-                    App.Default.local_lang = body.Replace("\"", "");
+                    Properties.App.Default.local_lang = body.Replace("\"", "");
 
-                    if (App.Default.debug)
+                    if (Properties.App.Default.debug)
                     {
                         Debug.WriteLine("=======================================================================================================================================");
                         Debug.WriteLine("[DEBUG] - WSClient.cs:GetLocaluser:body : " + body);
-                        Debug.WriteLine("[DEBUG] - WSClient.cs:GetLocaluser:lang : " + App.Default.local_lang);
+                        Debug.WriteLine("[DEBUG] - WSClient.cs:GetLocaluser:lang : " + Properties.App.Default.local_lang);
                         Debug.WriteLine("=======================================================================================================================================");
                     }
 
@@ -122,8 +122,8 @@ namespace LanguageChanger
                 var request = new HttpRequestMessage
                 {
                     Method = HttpMethod.Get,
-                    RequestUri = new Uri("wss://riot:" + App.Default.lockfile_password + "@127.0.0.1:" + App.Default.lockfile_port + "/player-account/aliases/v1/active"),
-                    Headers = { { "Authorization", "Basic " + App.Default.lockfile_token }, },
+                    RequestUri = new Uri("wss://riot:" + Properties.App.Default.lockfile_password + "@127.0.0.1:" +     Properties.App.Default.lockfile_port + "/player-account/aliases/v1/active"),
+                    Headers = { { "Authorization", "Basic " + Properties.App.Default.lockfile_token }, },
                 };
                 using (var response = await client.SendAsync(request))
                 {
@@ -131,10 +131,10 @@ namespace LanguageChanger
                     var body = await response.Content.ReadAsStringAsync();
 
                     Json_LocalUser data = JsonConvert.DeserializeObject<Json_LocalUser>(body);
-                    App.Default.local_user = data.game_name;
-                    App.Default.local_tag = data.tag_line;
+                    Properties.App.Default.local_user = data.game_name;
+                    Properties.App.Default.local_tag = data.tag_line;
 
-                    if(App.Default.debug)
+                    if(Properties.App.Default.debug)
                     {
                         Debug.WriteLine("=======================================================================================================================================");
                         Debug.WriteLine("[DEBUG] - WSClient.cs:GetLocaluser:body : " + body);

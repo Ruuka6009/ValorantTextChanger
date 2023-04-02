@@ -11,21 +11,21 @@ namespace LanguageChanger
         {
             using (var client = new HttpClient())
             {
-                var pakdl = App.Default.selected_lang + "_Text-WindowsClient.pak";
-                var sigdl = App.Default.selected_lang + "_Text-WindowsClient.sig";
+                var pakdl = Properties.App.Default.selected_lang + "_Text-WindowsClient.pak";
+                var sigdl = Properties.App.Default.selected_lang + "_Text-WindowsClient.sig";
 
-                var pakold = App.Default.local_lang + "_Text-WindowsClient.pak";
-                var sigold = App.Default.local_lang + "_Text-WindowsClient.sig";
+                var pakold = Properties.App.Default.local_lang + "_Text-WindowsClient.pak";
+                var sigold = Properties.App.Default.local_lang + "_Text-WindowsClient.sig";
 
-                var pakpath = App.Default.local_gamepath + @"\ShooterGame\Content\Paks\";
+                var pakpath = Properties.App.Default.local_gamepath + @"\ShooterGame\Content\Paks\";
 
                 if (File.Exists(pakpath + pakdl)) File.Delete(pakpath + pakdl);
                 if (File.Exists(pakpath + sigdl)) File.Delete(pakpath + sigdl);
 
-                await client.DownloadFileTaskAsync(new Uri(App.Default.baselink + pakdl), pakpath + pakdl);
-                await client.DownloadFileTaskAsync(new Uri(App.Default.baselink + sigdl), pakpath + sigdl);
+                await client.DownloadFileTaskAsync(new Uri(Properties.App.Default.baselink + pakdl), pakpath + pakdl);
+                await client.DownloadFileTaskAsync(new Uri(Properties.App.Default.baselink + sigdl), pakpath + sigdl);
 
-                if(App.Default.selected_lang != App.Default.local_lang)
+                if(Properties.App.Default.selected_lang != Properties.App.Default.local_lang)
                 {
                     File.Delete(pakpath + pakold);
                     File.Delete(pakpath + sigold);

@@ -17,19 +17,19 @@ namespace LanguageChanger
 
         private void loadSettings()
         {
-            if (App.Default.current_theme == 1)
+            if (Properties.App.Default.current_theme == 1)
             {
                 theme1.Select();
             }
-            if (App.Default.current_theme == 2)
+            if (Properties. App.Default.current_theme == 2)
             {
                 theme2.Select();
             }
-            if (App.Default.current_theme == 3)
+            if (Properties.App.Default.current_theme == 3)
             {
                 theme3.Select();
             }
-            if (App.Default.current_theme == 4)
+            if (Properties.App.Default.current_theme == 4)
             {
                 theme4.Select();
             }
@@ -78,11 +78,11 @@ namespace LanguageChanger
 
         private void apply_Click(object sender, EventArgs e)
         {
-            if (theme1.Checked) { App.Default.current_theme = 1; }
-            if (theme2.Checked) { App.Default.current_theme = 2; }
-            if (theme3.Checked) { App.Default.current_theme = 3; }
-            if (theme4.Checked) { App.Default.current_theme = 4; }
-            App.Default.Save();
+            if (theme1.Checked) { Properties.App.Default.current_theme = 1; }
+            if (theme2.Checked) { Properties.App.Default.current_theme = 2; }
+            if (theme3.Checked) { Properties.App.Default.current_theme = 3; }
+            if (theme4.Checked) { Properties.App.Default.current_theme = 4; }
+            Properties.App.Default.Save();
         }
     }
 }

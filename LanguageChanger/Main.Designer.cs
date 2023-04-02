@@ -112,9 +112,7 @@
             // 
             // settingsbtn
             // 
-            this.settingsbtn.ErrorImage = global::LanguageChanger.Properties.Resources.settings;
             this.settingsbtn.Image = global::LanguageChanger.Properties.Resources.settings;
-            this.settingsbtn.InitialImage = global::LanguageChanger.Properties.Resources.settings;
             this.settingsbtn.Location = new System.Drawing.Point(373, 29);
             this.settingsbtn.Name = "settingsbtn";
             this.settingsbtn.Size = new System.Drawing.Size(25, 25);
@@ -125,9 +123,7 @@
             // 
             // closebtn
             // 
-            this.closebtn.ErrorImage = global::LanguageChanger.Properties.Resources.close;
             this.closebtn.Image = global::LanguageChanger.Properties.Resources.close;
-            this.closebtn.InitialImage = global::LanguageChanger.Properties.Resources.close;
             this.closebtn.Location = new System.Drawing.Point(373, 4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(25, 25);
