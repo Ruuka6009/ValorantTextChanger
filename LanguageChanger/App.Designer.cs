@@ -97,7 +97,7 @@ namespace LanguageChanger {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool debug {
             get {
                 return ((bool)(this["debug"]));
@@ -182,6 +182,18 @@ namespace LanguageChanger {
             }
             set {
                 this["selected_lang"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int current_theme {
+            get {
+                return ((int)(this["current_theme"]));
+            }
+            set {
+                this["current_theme"] = value;
             }
         }
     }
