@@ -19,17 +19,20 @@ namespace LanguageChanger
 
                 var pakpath = App.Default.local_gamepath + @"\ShooterGame\Content\Paks\";
 
-                if (File.Exists(App.Default.baselink + pakdl)) File.Delete(App.Default.baselink + pakdl);
-                if (File.Exists(App.Default.baselink + sigdl)) File.Delete(App.Default.baselink + sigdl);
+                if (File.Exists(pakpath + pakdl)) File.Delete(pakpath + pakdl);
+                if (File.Exists(pakpath + sigdl)) File.Delete(pakpath + sigdl);
 
                 await client.DownloadFileTaskAsync(new Uri(App.Default.baselink + pakdl), pakpath + pakdl);
                 await client.DownloadFileTaskAsync(new Uri(App.Default.baselink + sigdl), pakpath + sigdl);
 
-                File.Delete(pakpath + pakold);
-                File.Delete(pakpath + sigold);
+                if(App.Default.selected_lang != App.Default.local_lang)
+                {
+                    File.Delete(pakpath + pakold);
+                    File.Delete(pakpath + sigold);
 
-                File.Move(pakpath + pakdl, pakpath + pakold);
-                File.Move(pakpath + sigdl, pakpath + sigold);
+                    File.Move(pakpath + pakdl, pakpath + pakold);
+                    File.Move(pakpath + sigdl, pakpath + sigold);
+                }
                 return true;
             }
         }
