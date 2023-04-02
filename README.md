@@ -1,7 +1,7 @@
 # ValorantTextChanger
 Lil executable made in C# made to have different Voice language and Text language for Valorant
 
----Showcase video https://youtu.be/j6tMMrjt8pQ ---
+### --- 👉 Showcase video https://youtu.be/j6tMMrjt8pQ 👈 ---
 
 ## First, the language of your game will be the language of your voicelines, audio callout, etc.
 So if you select in your Riot Launcher the language Japanese (for exemple)
