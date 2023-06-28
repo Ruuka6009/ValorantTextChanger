@@ -12,7 +12,7 @@ namespace LanguageChanger.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class App : global::System.Configuration.ApplicationSettingsBase {
         
         private static App defaultInstance = ((App)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new App())));
@@ -166,7 +166,7 @@ namespace LanguageChanger.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://109.123.242.59/~nonomi/mirror/valo/txtpaks/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://mirror.mvp.re/langchanger/")]
         public string baselink {
             get {
                 return ((string)(this["baselink"]));
