@@ -7,7 +7,7 @@ namespace LanguageChanger
 {
     internal class WSClient
     {
-        ClientWebSocket ws = new ClientWebSocket();
+        readonly ClientWebSocket ws = new ClientWebSocket();
         public string json;
 
         public async Task<bool> GetAllLang()
@@ -50,7 +50,6 @@ namespace LanguageChanger
 
                     return true;
                 }
-                return false;
             }
             catch (Exception ex) { Debug.Write(ex); }
             return false;
@@ -96,7 +95,6 @@ namespace LanguageChanger
 
                     return true;
                 }
-                return false;
             }
             catch (Exception ex) { Debug.Write(ex); }
             return false;
@@ -148,7 +146,6 @@ namespace LanguageChanger
 
                     return true;
                 }
-                return false;
             }
             catch (Exception ex) { Debug.Write(ex); }
             return false;

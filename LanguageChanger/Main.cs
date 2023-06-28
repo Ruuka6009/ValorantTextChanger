@@ -231,7 +231,7 @@ namespace LanguageChanger
 
             if(setName)
             {
-                string[] hellostrs = { "Hey", "Yop", "Hello", "Salutations", "Bonjour", "Holà", "おはよう", "Ohayō", "Hi", "Heyyy~" };
+                string[] hellostrs = { "Hey", "Yop", "Hello", "Salutations", "Bonjour", "Holà", "おはよう", "Ohayō", "Hi", "Heyyy~", "Smekz." };
                 Random rand = new Random();
                 int index = rand.Next(hellostrs.Length);
 

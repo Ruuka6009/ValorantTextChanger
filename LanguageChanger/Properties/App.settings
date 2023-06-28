@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LanguageChanger" GeneratedClassName="App">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LanguageChanger.Properties" GeneratedClassName="App">
   <Profiles />
   <Settings>
     <Setting Name="lockfile_path" Type="System.String" Scope="User">
@@ -39,7 +39,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="baselink" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://109.123.242.59/~nonomi/mirror/valo/txtpaks/</Value>
+      <Value Profile="(Default)">https://mirror.mvp.re/langchanger/</Value>
     </Setting>
     <Setting Name="selected_lang" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
