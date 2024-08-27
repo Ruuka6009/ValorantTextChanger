@@ -39,7 +39,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="baselink" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://mirror.mvp.re/langchanger/</Value>
+      <Value Profile="(Default)">http://85.10.200.74/langchanger/</Value>
     </Setting>
     <Setting Name="selected_lang" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
